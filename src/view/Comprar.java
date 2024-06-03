@@ -38,8 +38,10 @@ public class Comprar {
                             produto.getPreco(), 1);
                     carrinho.add(produtoCarrinho);
                     System.out.println("Produto adicionado ao carrinho com sucesso!");
+                    System.out.println();
                 }else{
                     System.out.println("Produto já se encontra no carrinho");
+                    System.out.println();
                 }
                 // Diminui a quantidade do produto no estoque
                 produto.setQuantidade(produto.getQuantidade() - 1);
@@ -50,10 +52,13 @@ public class Comprar {
                 }
             } else {
                 System.out.println("Quantidade solicitada não disponível no estoque.");
+                System.out.println();
             }
         } else if (produto == null){
             System.out.println("Produto não encontrado no estoque." +
                     "\nPor favor verifique a lista de produtos para mais informações");
+            System.out.println();
+
         }
     }
 
@@ -65,6 +70,7 @@ public class Comprar {
             System.out.println();
         }
         System.out.println("O total da compra é de  R$: " + total);
+        System.out.println();
     }
 
 }

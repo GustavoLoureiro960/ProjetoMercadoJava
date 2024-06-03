@@ -71,6 +71,7 @@ public class Mercado {
                                 System.out.println("Opção invalida, por favor selecione uma opção valida");
                                 System.out.println("1 - Continuar comprando");
                                 System.out.println("2 - Finalizar compra e sair do sistema");
+                                System.out.println();
                                 break;
                         }
                     }while (continuarComprando);
@@ -78,18 +79,22 @@ public class Mercado {
                 case 4:
                     System.out.println("Você escolheu ver o seu carrinho");
                     Comprar.ListarCarrinho(carrinho);
+                    System.out.println();
                     break;
                 case 5:
                     System.out.println("Você escolheu finalizar sua(s) compra(s)");
+                    System.out.println();
 
                     if(carrinho.isEmpty()){
                         System.out.println("O carrinho está vazio");
                         System.out.println("Deseja ver meus produtos? (s/n)");
+                        System.out.println();
                         String continuar = input.next();
                         if (continuar.equalsIgnoreCase("s")) {
                             opcoes = 2;
                         }else {
                             System.out.println("Obrigado por visitar minha loja volte sempre");
+                            System.out.println();
                             opcoes = 6;
                         }
 
@@ -100,8 +105,10 @@ public class Mercado {
                     break;
                 case 6:
                     System.out.println("Obrigado por escolher minha loja fazer suas compras, até a próxima");
+                    System.out.println();
                 default:
                     System.out.println("Opção inválida");
+                    System.out.println();
                     break;
             }
         } while (opcoes != 6);

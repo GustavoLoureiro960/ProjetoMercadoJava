@@ -41,13 +41,16 @@ public class Estoque {
         String name = scan.nextLine();
         if (name.equalsIgnoreCase("quit")) {
         }
+        System.out.println();
 
         System.out.println("Por favor insira a marca do produto que você deseja adicionar.");
         String marca = scan.next();
         if (marca.equalsIgnoreCase("quit")) {
         }
+        System.out.println();
 
         System.out.println("Por favor insira o preço do produto que você deseja adicionar.");
+        System.out.println();
         double preco;
 
         while (true){
@@ -55,16 +58,19 @@ public class Estoque {
                 preco = Double.parseDouble(scan.nextLine());
                 if (preco <= 0) {
                     System.out.println("O Preço precisa ser maior do que 0. Por favor insira outro valor superiror.");
+                    System.out.println();
                 }else {
                     break;
                 }
             }catch (NumberFormatException e){
                 System.out.println("Por favor insira um valor númerico válido para o preço");
+                System.out.println();
             }
         }
 
 
         System.out.println("Por favor insira a quantidade do produto que você deseja adicionar ao estoque.");
+        System.out.println();
         int quantidade;
         while (true){
             try{
@@ -72,11 +78,13 @@ public class Estoque {
                 if (quantidade <= 0) {
                     System.out.println("A quantidade de unidades do produto precisa ser maior do que 0.\n" +
                             " Por favor insira outro valor superiror");
+                    System.out.println();
                 }else {
                     break;
                 }
             }catch (NumberFormatException e) {
                 System.out.println("por favor insira um valor valido.");
+                System.out.println();
             }
         }
 
