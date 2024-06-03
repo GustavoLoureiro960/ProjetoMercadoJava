@@ -6,7 +6,7 @@ public class Produto {
     private double preco;
     private int quantidade;
 
-    public Produto(String nome, String marca, double preco, int quantidade) {
+    Produto(String nome, String marca, double preco, int quantidade) {
         this.nome = nome;
         this.marca = marca;
         this.preco = preco;
@@ -40,7 +40,13 @@ public class Produto {
     public int getQuantidade(){
         return quantidade;
     }
-    public void getQuantidade(int quantidade){
+    public void setQuantidade(int quantidade){
         this.quantidade = quantidade;
     }
+
+    @Override
+    public String toString(){
+        return "Nome: " + nome + "\n Marca: " + marca + "\n Preço: R$ " + preco + "\n Quantidade: " + quantidade;
+    }
 }
+
